@@ -8,6 +8,7 @@ Scored work from [DataDriven](https://datadriven.io/u/clever_snow_5067), committ
 
 | Problem | Domain | Difficulty | Solved |
 |---|---|---|---|
+| [The Cache That Ate the Cluster](./practice/sql/the-cache-that-ate-the-cluster) | SQL | Medium | 2026-11-24 |
 | [Top Product Categories](./practice/sql/top-product-categories) | SQL | Medium | 2026-11-24 |
 | [Users Per Device Type](./practice/sql/users-per-device-type) | SQL | Easy | 2026-11-24 |
 | [Two Ways to Catch a Change](./practice/pipeline_architecture/two-ways-to-catch-a-change) | Pipeline Architecture | Medium | 2026-11-19 |
