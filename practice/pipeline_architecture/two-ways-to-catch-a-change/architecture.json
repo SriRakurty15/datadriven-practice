@@ -1,0 +1,170 @@
+{
+  "components": [
+    {
+      "id": "s_1795033230145_1",
+      "name": "db2",
+      "type": "source",
+      "position": {
+        "x": 90,
+        "y": 91
+      }
+    },
+    {
+      "id": "s_1795033275775_2",
+      "name": "db2",
+      "type": "source",
+      "position": {
+        "x": 95,
+        "y": 91
+      }
+    },
+    {
+      "id": "s_1795112116966_2",
+      "name": "Debezium connector for CDC",
+      "type": "transform",
+      "position": {
+        "x": 90,
+        "y": 95
+      }
+    },
+    {
+      "id": "s_1795112136432_3",
+      "name": "Debezium connector for CDC_copy",
+      "type": "transform",
+      "position": {
+        "x": 95,
+        "y": 95
+      }
+    },
+    {
+      "id": "s_1795112147550_6",
+      "name": "Kafka",
+      "type": "queue",
+      "position": {
+        "x": 92,
+        "y": 98
+      }
+    },
+    {
+      "id": "s_1795112212331_10",
+      "name": "Schema registry + contract checks",
+      "type": "quality_gate",
+      "position": {
+        "x": 101,
+        "y": 98
+      }
+    },
+    {
+      "id": "s_1795112310105_12",
+      "name": "Bronze Lyer",
+      "type": "transform",
+      "position": {
+        "x": 92,
+        "y": 101
+      }
+    },
+    {
+      "id": "s_1795112353970_14",
+      "name": "Fraud Consumer",
+      "type": "consumer",
+      "position": {
+        "x": 87,
+        "y": 103
+      }
+    },
+    {
+      "id": "s_1795112868705_16",
+      "name": "Merge statement to store history",
+      "type": "transform",
+      "position": {
+        "x": 97,
+        "y": 103
+      }
+    },
+    {
+      "id": "s_1795112908927_18",
+      "name": "Silver layer",
+      "type": "storage",
+      "position": {
+        "x": 97,
+        "y": 107
+      }
+    },
+    {
+      "id": "s_1795112944817_20",
+      "name": "Rconciliation (Data Qulity Check)",
+      "type": "quality_gate",
+      "position": {
+        "x": 102,
+        "y": 107
+      }
+    },
+    {
+      "id": "s_1795112996472_22",
+      "name": "Analytics team",
+      "type": "consumer",
+      "position": {
+        "x": 97,
+        "y": 111
+      }
+    }
+  ],
+  "connections": [
+    {
+      "from": "s_1795033230145_1",
+      "to": "s_1795112116966_2",
+      "type": "data_flow"
+    },
+    {
+      "from": "s_1795033275775_2",
+      "to": "s_1795112136432_3",
+      "type": "data_flow"
+    },
+    {
+      "from": "s_1795112116966_2",
+      "to": "s_1795112147550_6",
+      "type": "data_flow"
+    },
+    {
+      "from": "s_1795112136432_3",
+      "to": "s_1795112147550_6",
+      "type": "data_flow"
+    },
+    {
+      "from": "s_1795112147550_6",
+      "to": "s_1795112212331_10",
+      "type": "data_flow"
+    },
+    {
+      "from": "s_1795112147550_6",
+      "to": "s_1795112310105_12",
+      "type": "data_flow"
+    },
+    {
+      "from": "s_1795112310105_12",
+      "to": "s_1795112353970_14",
+      "type": "data_flow"
+    },
+    {
+      "from": "s_1795112310105_12",
+      "to": "s_1795112868705_16",
+      "type": "data_flow"
+    },
+    {
+      "from": "s_1795112868705_16",
+      "to": "s_1795112908927_18",
+      "type": "data_flow"
+    },
+    {
+      "from": "s_1795112908927_18",
+      "to": "s_1795112944817_20",
+      "type": "data_flow"
+    },
+    {
+      "from": "s_1795112908927_18",
+      "to": "s_1795112996472_22",
+      "type": "data_flow"
+    }
+  ],
+  "zones": []
+}
