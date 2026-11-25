@@ -8,6 +8,7 @@ Scored work from [DataDriven](https://datadriven.io/u/clever_snow_5067), committ
 
 | Problem | Domain | Difficulty | Solved |
 |---|---|---|---|
+| [User Devices](./practice/sql/user-devices) | SQL | Medium | 2026-11-25 |
 | [Weekend Warriors](./practice/sql/weekend-warriors) | SQL | Easy | 2026-11-24 |
 | [The Cache That Ate the Cluster](./practice/sql/the-cache-that-ate-the-cluster) | SQL | Medium | 2026-11-24 |
 | [Top Product Categories](./practice/sql/top-product-categories) | SQL | Easy | 2026-11-24 |
